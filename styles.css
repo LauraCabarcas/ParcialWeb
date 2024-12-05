@@ -1,0 +1,481 @@
+:root {
+  --color-primario: #fff4e3;
+  --color-secundario: #ffffff;
+  --color-negro: black;
+}
+html {
+  overflow-x: hidden;
+}
+
+
+html {
+  background-color: var(--color-primario);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center;
+  background-color: var(--color-primario); /* Fondo con color primario */
+  color: var(--color-negro); /* Texto en negro */
+  width: 780px;
+  height: 65px;
+  margin-left: 530px;
+  margin-top: 50px;
+  border: 3px solid var(--color-negro); /* Borde negro */
+  box-sizing: border-box; /* Incluye el borde en las dimensiones totales */
+  border-radius: 16px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 70px;
+  color: var(--color-negro); /* Texto negro */
+  font-weight: bold;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-negro); /* Texto de enlaces negro */
+  transition: color 0.3s;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  color: var(--color-negro);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: auto; /* Asegura que el botón hamburguesa quede al final */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    width: auto; /* Ancho completo */
+    height: auto; /* Ajusta altura según contenido */
+    padding: 10px 15px;
+    margin-left: 20px;
+  }
+
+  .navbar-links {
+    display: none; /* Oculta los enlaces por defecto */
+    flex-direction: column;
+    gap: 20px; /* Reduce el espacio entre enlaces */
+    position: absolute;
+    top: 70px; /* Debajo de la navbar */
+    right: 10px;
+    left: 10px;
+    background-color: var(--color-primario);
+    border: 2px solid var(--color-negro);
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primario); /* Fondo con color primario */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid var(--color-negro); /* Borde negro */
+    border-radius: 5px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+.container {
+  width: 5000px;
+  max-width: 1600px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 0.5fr 0.5fr;
+  position: relative;
+  padding: 0 100px;
+  margin-left: 11cm;
+  margin-top: 3cm;
+}
+
+.section1 .titulo {
+  text-align: left;
+  grid-row: 1/2;
+  grid-column: 1;
+  color: #000000;
+  font-size: 50px;
+}
+
+.section1 .texto {
+  text-align: justify;
+  grid-row: 1/2;
+  grid-column: 1;
+  color: #000000;
+  font-size: 19px;
+  margin-right: 50px;
+  margin-top: 300px;
+}
+
+.LauraPerfil {
+  background-image: url("Imagenes/LauraPerfil.jpg"); /* Ruta actualizada */
+  background-size: cover; /* Ajusta para que ocupe todo el contenedor */
+  width: 300px; /* Define el ancho del div */
+  height: 400px; /* Define la altura del div */
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding:  20px;
+    margin-left: 0;
+  }
+
+  .section1 .titulo,
+  .section1 .texto {
+    grid-column: 1;
+    text-align: center;
+    margin-right: 33cm;
+  }
+
+  .section1 .titulo {
+    font-size: 30px;
+    text-shadow: none;
+  }
+
+  .section1 .texto {
+    font-size: 15px;
+    margin-top: 0cm;
+    text-align: center;
+  }
+
+  .section1 .LauraPerfil {
+    display: none;
+  }
+}
+.ImagenGrande1 {
+  background-image: url("Imagenes/1.jpg");
+  width: 2070px;
+  height: 1024px;
+  background-size: cover;
+  margin-right:7cm;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .ImagenGrande1 {
+    background-image: url("Imagenes/Imagen1Movil.jpg"); /* Imagen para pantallas pequeñas */
+    width: 430px;
+    height: 700px;
+    margin-top: 2cm;
+    margin-right: 40px;
+  }
+}
+
+/* Estilo para el contenedor */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las cartas */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Estilo para las cartas */
+.card {
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px;
+  text-align: center; /* Alineación de texto */
+  color: #000000;
+
+}
+
+/* Estilo para el título */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Espacio debajo del título */
+  color: #000000; /* Color del texto */
+}
+
+/* Estilo para la descripción */
+.card-description {
+  font-size: 18px;
+  line-height: 1.5; /* Mejora la legibilidad */
+  color: #000000; /* Color del texto */
+}
+
+.principal {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(1, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las cartas */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.titulo-principal {
+  font-size: 50px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.descripcion-principal {
+  text-align: center;
+  width: 500px;
+  margin: 10px auto;
+  margin-top: -1cm;
+}
+.card-icon {
+  width: 50px; /* Ajusta el tamaño del ícono */
+  height: 50px;
+  margin-bottom: 10px; /* Espaciado entre el ícono y el título */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+.grid-container{
+  grid-template-columns: 1fr;
+}
+.principal {
+  padding: 10px; /* Reduce el espaciado interno en pantallas pequeñas */
+  max-width: 100%; /* Ocupa todo el ancho del contenedor */
+
+}
+
+.titulo-principal {
+font-size: 30px;
+}
+
+.descripcion-principal {
+  width: 300px;
+  height: 200px;
+  font-size: 18px;
+}
+
+}
+.titulo-trabajos{
+text-align: center;
+font-size: 35px;
+}
+.image-grid-section {
+  padding: 20px;
+  text-align: center; /* Centra el contenido dentro de la sección */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 40px; /* Espaciado entre imágenes */
+  justify-items: center; /* Centra cada imagen en su celda */
+  align-items: center;
+
+}
+
+.image-item img {
+  width: 300px; /* Ancho fijo */
+  height: 400px; /* Alto fijo */
+  object-fit: cover; /* Ajusta la imagen dentro del área asignada */
+
+}
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .image-grid {
+      grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .image-item img {
+      max-width: 90%; /* Ocupa la mayor parte del ancho disponible */
+  }
+}
+
+
+.testimonios {
+  padding: 10px; /* Espaciado alrededor de la sección */
+
+}
+
+.container-testimonios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 10px; /* Espacio entre los elementos */
+  padding: 20px;
+}
+
+.titulo-general {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Espacio debajo del título */
+  margin-top: 5cm;
+}
+
+.descripcion {
+  margin-top: 3cm;
+  margin-left:9cm;
+  text-align: center;
+
+}
+
+.descripcion p {
+  margin: 3px; 
+  height: 100px;
+  width: 300px;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .container-testimonios {
+    grid-template-columns: 1fr;
+    padding: 10px; 
+  }
+
+  .titulo-general {
+    font-size: 30px; 
+    margin-top: 1cm; 
+  }
+
+  .descripcion {
+    margin-top: 2cm; 
+    width: 100%;
+    margin-left: 20px; 
+    margin-right: 10px; 
+  }
+}
+
+.preguntas-frecuentes {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.titulo-preguntas {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+.accordion-item {
+  align-items: center;
+  width:800px;
+  border: 2px solid #000000; /* Borde gris claro */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el contenido extra */
+  margin-bottom: 20px;
+
+}
+
+.accordion-title {
+  display: flex; /* Se asegura que los hijos se distribuyan en fila */
+  justify-content: space-between; /* Texto a la izquierda, ícono a la derecha */
+  align-items: center; /* Alineación vertical */
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-family: inherit;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--color-primario);
+}
+
+
+.accordion-content {
+  display: none; /* Oculta el contenido por defecto */
+  padding: 15px;
+  font-size: 16px;
+  text-align: left;
+
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.accordion-item.active .accordion-content {
+  display: block; /* Muestra el contenido del desplegable activo */
+}
+
+.icono-mas{
+  margin-left: auto; /* Empuja el ícono hacia la derecha */
+  width: 30px; /* Tamaño reducido del ícono */
+  height: 30px;
+  border: 2px auto #000000;
+}
+@media (max-width: 768px) {
+  .accordion-item{
+    width:340px;
+    margin-left: 0.5cm;
+  }
+
+
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent; /* Sin fondo */
+}
+
+.iconos-footer {
+  display: flex;
+  gap: 20px; /* Espacio entre los íconos */
+}
+
+.icono-footer {
+  width: 40px; /* Tamaño ajustado del ícono */
+  height: 40px;
+}
+.btn-top {
+  position:fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none; /* Oculto por defecto */
+  background-color: var(--color-primario); /* Fondo blanco */
+  border: 2px solid #000000;
+  border-radius: 50%; /* Redondeado completo */
+  padding: 2px; /* Espaciado interno */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  z-index: 1000; /* Siempre visible */
+}
+
+.icono-top {
+  width: 50px; /* Tamaño del ícono */
+  height: 50px;
+  transition: transform 0.3s ease; /* Efecto al hacer hover */
+  margin-top: 1px;
+}
+
+.btn-top:hover .icono-top {
+  transform: scale(1.2); /* Agranda el ícono ligeramente */
+}
