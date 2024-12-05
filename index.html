@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <section>
+  <!--NAVBAR-->
+  <section class="navbar-c">
     <nav class="navbar">
       <ul class="navbar-links">
         <li><a href="#inicio">QUIÉN SOY?</a></li>
@@ -20,6 +21,20 @@
       <button class="navbar-toggle" id="navbar-toggle">☰</button>
     </nav>
   </section>
+
+  <script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("navbar-toggle");
+  const navbarLinks = document.querySelector(".navbar-links");
+
+  toggleButton.addEventListener("click", () => {
+    // Alterna la clase "active" para mostrar/ocultar los enlaces
+    navbarLinks.classList.toggle("active");
+  });
+});
+
+
+  </script>
   <!--Section Cara Pagina-->
   <section class="section1 section-my">
     <article>

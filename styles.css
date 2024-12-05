@@ -64,30 +64,22 @@ html {
   }
 
   .navbar-links {
-    display: none; /* Oculta los enlaces por defecto */
+    display: none; /* Ocultos por defecto */
     flex-direction: column;
-    gap: 20px; /* Reduce el espacio entre enlaces */
-    position: absolute;
-    top: 70px; /* Debajo de la navbar */
-    right: 10px;
-    left: 10px;
+    gap: 20px;
     background-color: var(--color-primario);
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    margin-right: 20px;
+    left: 40px;
     border: 2px solid var(--color-negro);
     border-radius: 10px;
     padding: 15px;
   }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    background-color: var(--color-primario); /* Fondo con color primario */
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-    border: 2px solid var(--color-negro); /* Borde negro */
-    border-radius: 5px;
+  
+  .navbar-links.active {
+    display: flex; /* Muestra los enlaces cuando la clase "active" está presente */
   }
 
   .navbar-toggle {
